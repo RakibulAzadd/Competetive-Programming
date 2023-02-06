@@ -19,7 +19,7 @@ int main()
 	for (ll i = 1; i <= n; i++)
 	{
 		par[i] = i;
-	    sz[i]=i;
+	    sz[i]=1;
 	}
 	while(m--)
 	{
