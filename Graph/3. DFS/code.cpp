@@ -2,10 +2,11 @@
 using namespace std;
 vector<int> v[10000];
 int visit[10002];
-DFS(int node)
+
+  DFS(int node)
 {
     visit[node] = 1;
-    cout << node << "->" ;
+    cout << node << "-> rakib ";
     for (int i = 0; i < v[node].size(); i++)
     {
         int child = v[node][i];
