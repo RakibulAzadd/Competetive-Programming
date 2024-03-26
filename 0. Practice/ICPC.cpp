@@ -19,6 +19,8 @@ int32_t main()
     {
 
 
+
+
         int a,b,c,x,y,z,sum=0,ans=0,k;
         cin>>a;
         vector<int>v;

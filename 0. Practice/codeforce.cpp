@@ -12,7 +12,7 @@ void solve()
     int a,b,c,x=26,y=0,z,sum=0,ans=1,odd=0,even=0,res,zero=0,one=mod,mid;
 
     
-    string s;
+    string s,ss;
     cin>>s;
   
       if(s[0]=='<' && s[s.size()-1]=='>') 
