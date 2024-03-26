@@ -23,7 +23,7 @@ void solve()
              {
               cout<<"NO"<<endl;
               return;
-             }
+            }
            }
             cout<<"YES"<<endl;
             return;
