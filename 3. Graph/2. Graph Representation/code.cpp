@@ -1,7 +1,7 @@
  
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> v[10000];
+vector<int> v[100001];
 int main()
 {
     int n, m;
