@@ -3,7 +3,7 @@ using namespace std;
 vector<int> v[10000];
 int visit[10002];
 
-  DFS(int node)
+  int DFS(int node)
 {
     visit[node] = 1;
     cout << node << "-> rakib ";
