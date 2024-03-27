@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<int> v[10000];
-int visit[10002];
+int visit[10002],sum=0;
 
   int DFS(int node)
 {
     visit[node] = 1;
+    sum++;
     cout << node << "->  ";
     for (int i = 0; i < v[node].size(); i++)
     {
@@ -28,6 +29,7 @@ int main()
         v[y].push_back(x);
     }
     DFS(1);
+    cout<<endl<< "size of tree = " <<sum<<endl;
     return 0;
 }
 /*
