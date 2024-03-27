@@ -10,6 +10,7 @@ int visit[10002];
         if (visit[i] == 0)
         {
             DFS(i);
+          
         }
     }
 }
@@ -29,8 +30,9 @@ int main()
     {
         if(visit[i]==0)
            {
-             co++;
+             
              DFS(i);
+              co++;
            }
     }
     cout<<co<<endl;
