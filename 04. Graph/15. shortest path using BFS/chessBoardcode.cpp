@@ -82,3 +82,15 @@ int main()
     }
 
    }
+
+   //https://www.spoj.com/problems/NAKANJ/
+   /*
+   INPUT: 
+    3
+a1 h8
+a1 c2
+h8 c3 
+OUTPUT : 6
+1
+4
+*/
