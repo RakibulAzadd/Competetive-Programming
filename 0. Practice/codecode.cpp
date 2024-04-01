@@ -1,78 +1,63 @@
- #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 #define mod 1000000007
 #define int long long
 #define endl '\n'
-const int mn=1e5+9;
+const int mn = 1e5 + 9;
 using namespace std;
-
-int mm =10000007;
+const int INF = 1e9+10;
+int mm = 10000007;
 int mp[mn];
 
 void solve()
 {
-    int a=0,b=0,c=0,d=0,e,f,g,n,x,y,z,sum=1,ans,co=2,h=4,m=0,w=0 ;
-    cin>>a;
-    vector<int> nums(a);
-    
-    for(int i=0;i<a;i++)
-      {
-         cin>>nums[i];
-      }
-       int target;
-       cin>>target;
+  int a = 0, b = 0, c = 0, d = 0, e, f, g, n, x, y, z, sum = 1, ans, co = 2, h = 4, m = INF, w = 0;
 
-      
-      sort(nums.begin(),nums.end());
-     if(nums[0]==target) {
-      cout<< 0<< endl;
-      return;
-     }
-   for(int i=1;i<a;i++)
+  cin >> n >> a >> b;
+  vector<int> v(n);
+   x = a + b;
+   map<int,int>mp;
+  for (int i = 0; i < n; i++)
+  {
+    cin >> v[i];
+    y=v[i]%x;
+    v[i]=y;
+   
+  }
+ 
+sort(v.begin(),v.end());
+ int ff= m-1;
+ int mm=0;
+ for(int i=0;i<v.size();i++)
+   {
+    if(i==n-1) 
     {
-        if(target==nums[i]) 
-        {
-         cout<< i<<endl; 
-         return;
-        }
-        else if(target>nums[i-1] && target<nums[i])
-       {
-         cout<<i<<endl;
-         return;
-       }
+           if(a-v[n-1]+v[0]>0)
+            {
+              cout<< "Yes" <<endl;
+              return ;
+            }
     }
-
-    
+    else if((v[i+1]-v[i]) > b)  
+      {
+          cout<< "Yes" <<endl;
+          return ;
+      }
+   }
+ cout<< "No" <<endl;
+  
 
 }
 int32_t main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
 
-    int t;
-    t = 1;
-   // cin>>t;
-    while (t--)
-    {
-        solve();
-    }
+  int t;
+  t = 1;
+  // cin>>t;
+  while (t--)
+  {
+    solve();
+  }
 }
-
-
-// testcase =1
-
-/* array size = 7
-array = 1 7 3 5 6 9 15
- target= 5
- output = 2 */
-
-// Test Case = 2
-
-/*
-Array Size = 4
-Array = {5, 6, 1, 3}
-Target = 2
-
-output = 1 
- */
