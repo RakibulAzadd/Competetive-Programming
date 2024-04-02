@@ -14,7 +14,7 @@
    while(!q.empty())
     {
        x= q.top();
-      cout<<x<<endl;
+      cout<<x<< " ";
       q.pop();
     }
 
