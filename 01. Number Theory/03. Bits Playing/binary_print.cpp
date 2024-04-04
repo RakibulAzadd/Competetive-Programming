@@ -58,3 +58,25 @@ int main()
 
 
 }
+/* output : 
+
+00000001001
+set bit
+not set bit
+not set bit
+set bit
+not set bit
+not set bit
+not set bit
+not set bit
+not set bit
+00000001011
+tilda invert = 11111110110
+third bit unset = 00000001000
+11111110111
+unset 3th = 00000000001
+toggle= 00000001101
+total bit count = 2
+total bit count = 2
+
+ */
