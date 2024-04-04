@@ -42,3 +42,10 @@ int main()
 	cout << ans-1 << endl;
 	return 0;
 }
+
+/* INput : 4
+2
+1 2
+4 1
+output : 2 
+ */
