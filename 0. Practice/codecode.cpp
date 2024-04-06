@@ -4,49 +4,55 @@
 #define endl '\n'
 const int mn = 1e5 + 9;
 using namespace std;
-const int INF = 1e9+10;
+const int INF = 1e9 + 10;
 int mm = 10000007;
 int mp[mn];
 
 void solve()
 {
-  int a = 0, b = 0, c = 0, d = 0, e, f, g, n, x, y, z, sum = 1, ans, co = 2, h = 4, m = INF, w = 0;
-
-  cin >> n >> a >> b;
-  vector<int> v(n);
-   x = a + b;
-   map<int,int>mp;
-  for (int i = 0; i < n; i++)
+  int a;
+  cin >> a;
+  vector<pair<int, int>> v;
+  map<int, int> mp, mp2;
+  for (int i = 0; i < a; i++)
   {
-    cin >> v[i];
-    y=v[i]%x;
-    v[i]=y;
-   
-  }
- 
-sort(v.begin(),v.end());
- int ff= m-1;
- int mm=0;
- for(int i=0;i<v.size();i++)
-   {
-    if(i==n-1) 
+    int x, y;
+    cin >> x >> y;
+    if(mp2[y]==0) mp2[y]=x;
+    if (mp2[y] > x)
     {
-           if(a-v[n-1]+v[0]>0)
-            {
-              cout<< "Yes" <<endl;
-              return ;
-            }
+      mp2[y] = x;
+     // cout<<x<< endl;
     }
-    else if((v[i+1]-v[i]) > b)  
-      {
-          cout<< "Yes" <<endl;
-          return ;
-      }
-   }
- cout<< "No" <<endl;
-  
+    v.push_back({y, mp2[y]});
+    mp[y]++;
+  }
+  int mx = 0;
+  for (auto i : mp)
+  {
+    if (i.second > mx)
+    {
+      mx = i.second;
+    }
+  }
+  vector<int> vv;
+  for (auto i : mp)
+  {
+    if (i.second == mx)
+    {
+      vv.push_back(i.first);
+    }
+  }
+  int ans = 0;
+  for (auto i : vv)
+  {
+    //cout<<i<< " = "<< mp2[i] <<endl;
+    ans = max(ans, mp2[i]);
+  }
 
+  cout << ans << endl;
 }
+
 int32_t main()
 {
   ios_base::sync_with_stdio(0);
