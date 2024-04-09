@@ -36,7 +36,7 @@ int binExpIta(long long a, long long b)
 
 int main()
 {
-    int a = 10, b = 10;
+    int a = 2, b = 40;
    
     cout << binExpIta(a, b);
 
