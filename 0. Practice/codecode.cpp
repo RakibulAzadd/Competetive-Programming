@@ -11,41 +11,7 @@ int arr[mm];
 void solve()
 {
   int n, k;
-  cin >> n >> k;
-  vector<int> v(n), vv;
-  for (int i = 0; i < n; i++)
-  {
-    cin >> v[i];
-  }
-  int l = 0, r = n - 1;
-  while (l < r)
-  {
-    vv.push_back(v[l]);
-    vv.push_back(v[r]);
-    l++;
-    r--;
-  }
    
-  if (l == r)
-  {
-    vv.push_back(v[l]);
-  }
-   
-
-   for(int i=1;i<=n;i++){
-     arr[i]= arr[i-1]+vv[i-1];
-     // cout<<arr[i]<<endl;
-   }
-  int ans = n;
-   for(int i=1;i<=n;i++){
-   // cout<< arr[i] <<endl;
-    if(arr[i]>k) {
-     // cout<<arr[i]<< endl;
-      ans=i-1;
-      break;
-    }
-   }
-   cout<<ans<<endl;
 }
 
 int32_t main()
