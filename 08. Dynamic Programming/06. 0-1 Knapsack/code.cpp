@@ -8,7 +8,9 @@ long long dp[105][100005];
      if(wt_left== 0 ) return 0;
      if(ind<0) return 0;
      if(dp[ind][wt_left] !=-1) return dp[ind][wt_left];
+     // Don't choose item at ind
      long long  ans= func(ind-1,wt_left);
+    // Choose item ind
      if(wt_left-wt[ind]>=0)
      ans= max(ans, func(ind-1, wt_left-wt[ind]) + val[ind]);
      return dp[ind][wt_left] = ans;
