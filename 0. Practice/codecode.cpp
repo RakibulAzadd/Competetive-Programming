@@ -10,7 +10,34 @@ int arr[mm];
 
 void solve()
 {
-  int n, k;
+  string s,ss="";
+  cin>>s;
+  int  start;
+   
+  for(int i=0;i<s.size();i++){
+    if(s[i]=='1'){
+        ss+=s[i];
+      if(i<s.size()-1 && s[i+1]=='0'){
+             
+            start=i;
+            break;
+      }
+    }
+  }
+  
+  int ans=0;
+  for(int i=start+1;i<s.size();i++){
+  //  cout<<i<< " "<< ss<<endl;
+    if(s[i]=='1'){
+       ss+=s[i];
+      //cout<<ss<<endl;
+    }
+    else if(s[i]=='0' && ss.size()!=0){
+        ans+= ss.size()+1;
+    }
+  }
+   
+   cout<<ans<<endl;
    
 }
 

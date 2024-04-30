@@ -5,7 +5,7 @@ void printBinary(int num)
 {
     for (int i = 10; i >= 0; i--)
     {
-        // cout<< ((num>>i))<<" = "<<i<<endl;
+        //cout<< ((num>>i))<<" = "<<i<<endl;
         cout << ((num >> i) & 1);
     }
 }
