@@ -6,40 +6,53 @@ const int mn = 1e5 + 9;
 using namespace std;
 const int INF = 1e9 + 10;
 const int mm = 2e5 + 10;
-int arr[mm];
 
-void solve()
-{
-  string s,ss="";
-  cin>>s;
-  int  start;
-   
-  for(int i=0;i<s.size();i++){
-    if(s[i]=='1'){
-        ss+=s[i];
-      if(i<s.size()-1 && s[i+1]=='0'){
-             
-            start=i;
-            break;
+    void solve()
+ {
+      int n,k,q;
+      cin>>n>>k>>q;
+      vector<int>point(k),time(k);
+      for(int i=0;i<k;i++){
+          cin>>point[i];
       }
-    }
-  }
-  
-  int ans=0;
-  for(int i=start+1;i<s.size();i++){
-  //  cout<<i<< " "<< ss<<endl;
-    if(s[i]=='1'){
-       ss+=s[i];
-      //cout<<ss<<endl;
-    }
-    else if(s[i]=='0' && ss.size()!=0){
-        ans+= ss.size()+1;
-    }
-  }
+        for(int i=0;i<k;i++){
+          cin>>time[i];
+      }
+      map<int,int>mp;
+      for(int i=0;i<k;i++){
+        mp[point[i]]=time[i];
+      }
+      map<int,double>veg;
+      int age=0,tm=0;
+      for(int i=0;i<k;i++){
+        double a= (point[i]-age)/(double)(time[i]-tm);
+
+        veg.insert({point[i],a});
+        age=point[i];
+        tm=time[i];
+      }
+
+      while(q--){
+        int task;
+        cin>>task;
+        int s= *lower_bound(point.begin(),point.end(),task);
+       // cout<<s<<endl;
+        double sp=veg[s];
+          
+        int ex= s-task;
+        double mi= ex/sp;
+        int ans= mp[s]-mi;
+        cout<< ans<<" ";
+
+      }
+      cout<<endl;
+
+    
+
+
+          
    
-   cout<<ans<<endl;
-   
-}
+ }
 
 int32_t main()
 {

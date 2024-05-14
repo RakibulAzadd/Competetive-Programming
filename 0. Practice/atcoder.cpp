@@ -61,41 +61,32 @@ void sumOfDigits()
 
 void solve()
 {
-  int n, m, a, b, c, x = 0, y = 0, z, sum = 0, ans = 0, odd = 0, even = 0, res, zero = 0, one = 0;
-  cin>>a>>b>>n;
-  set<int>st;
-  int a1=a,b1=b;
-  while(a<=n) {
-    if(n%a==0) 
-    {
-      x++;
-    }
-    else break;
-   a*=a1;
-  }
-  while(b<=n)
-  {
-     if(n%b==0) 
-    {
-      y++;
-    }
-    else break;
-   b*=b1;
+  int n, m, a, b, c,d, x = 0, y = 0, z, sum = 0, ans = 0, odd = 0, even = 0, res, zero = 0, one = 0;
+   cin>>a>>b>>c>>d;
+   if(a>b){
+    x=b;
+    y=a;
+   }
+   else {
+    x=a;
+    y=b;
+   }
+   bool ok1=false,ok2=false;
+   for(int i=x;i<=y;i++){
+    if(i==c)
+    ok1=true;
+    if(i==d)ok2=true;
+
+   }
+   if((ok1&&ok2) || (!ok1 && !ok2)){
+    cout<<"NO"<<endl;
+
+   }
+
+  else {
+    cout<< "YES"<<endl;
   }
 
-  for(int i=0;i<=x;i++)
-   {
-    for(int j=0;j<=y;j++)
-     { 
-      long long g=pow(a1,i)*pow(b1,j);
-       if(n%g==0 && g<=n)
-       { 
-        st.insert(n/g);
-       }
-     }
-   }
- cout<<st.size()<<endl;
- return ;
    
 }
 int32_t main()
