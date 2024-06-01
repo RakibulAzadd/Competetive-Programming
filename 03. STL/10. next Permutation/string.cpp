@@ -5,7 +5,7 @@ int main()
 {
    string v="zbba";
  
-   // sort(v.begin(), v.end());
+    sort(v.begin(), v.end());
  
    // cout << "The 3! possible permutations with 3 elements:\n";
     do {

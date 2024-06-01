@@ -6,12 +6,13 @@ using namespace std;
         for(int i=0;i<k;i++) {
             sum+= v[i];
         }
-        double ans= (double)sum/ (double) k;
+        int ans= sum;
         for(int i=k;i<a;i++){
             sum-= v[i-k];
             sum+= v[i];
-            double x= (double)sum/ (double) k;
-            ans=max(ans,x);
+          //  double x= (double)sum/ (double) k;
+            ans=max(ans,sum);
+         
             
         }
         return ans;

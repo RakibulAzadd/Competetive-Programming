@@ -2,33 +2,45 @@
 using namespace std;
 const int mx= 1e6;
 int arr[mx+1];
+
+
+int commDiv(int a, int b)
+{
+    // find gcd of a, b
+    int n = __gcd(a, b);
+ 
+    // Count divisors of n.
+    
+    int result = 0;
+    for (int i = 1; i <= sqrt(n); i++) {
+        // if 'i' is factor of n
+        if (n % i == 0) {
+            // check if divisors are equal
+            if (n / i == i){
+                result += 1;
+                cout<<i<<" ";
+                }
+            else{
+                result += 2;
+                cout<<i << ' '<<n/i<< " ";
+                }
+        }
+    }
+    cout<<endl;
+    return result;
+}
 int main()
 {
          
         int n, m;
-        cin >> n;
+        n=12 ,m=18;
+
+
+        int ans= commDiv(n,m);
+        cout<<ans<<endl;
          
   
         
-         
-        for(int i=0;i<n;i++)
-        {
-            cin>>m;
-            arr[m]++;
-        }
-       for(int i=mx;i>0;i--)
-       {
-          int ans=0;
-          for(int j=i;j<=mx;j+=i)
-            {
-                ans+=arr[j];
-            }
-            if(ans>=2)
-            {
-                cout<<i<<endl;
-                return 0;
-            }
-       }
 
     return 0;
 }
