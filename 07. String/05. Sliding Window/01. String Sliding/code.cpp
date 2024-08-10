@@ -8,11 +8,13 @@ using namespace std;
 
 void solve()
 {
-   int a, b, c, d, x = 0, y = 0, z, sum = 0, ans = 0, odd = 0, even = 0, res, zero = 0, one = 1;
-   string s;
-   cin>>s;
-   string t;
-   cin>>t;
+   
+
+   int ans=0;
+   string s="ghytdfghy";
+   
+   string t="ghy";
+ 
     string s1=s.substr(0,3);
    if(s1==t)ans++;
    
@@ -34,7 +36,7 @@ int32_t main()
 
    int t;
    t = 1;
-   cin >> t;
+  
    while (t--)
    {
       solve();

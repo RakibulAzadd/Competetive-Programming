@@ -12,7 +12,7 @@ int main(){
         }
     }
     if(n>1) {
-        prime.push_back(i);
+        prime.push_back(n);
     }
     for(auto &i :prime){
         cout<< i << " ";
