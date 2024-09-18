@@ -19,7 +19,7 @@ int func(int ind,int amount, vector<int> & coins){
     }
 
  int main(){
-         int  a=5;
+         int  a=41;
          
          vector<int> coins= {1,2,5};
     cout<< change(a,coins)<<endl;

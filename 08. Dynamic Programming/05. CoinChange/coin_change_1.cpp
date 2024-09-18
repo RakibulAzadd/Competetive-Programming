@@ -24,6 +24,6 @@ int coinChange(vector<int> & coins, int amount){
 }
 int main(){
     vector<int> coins= {1,2,5};
-    cout<< coinChange(coins,11);
+    cout<< coinChange(coins,10);
     return 0;
 }
