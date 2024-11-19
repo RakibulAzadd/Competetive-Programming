@@ -25,3 +25,5 @@ int main()
     printf("%d \n", NCR(5, 3));
     return 0;
 }
+
+// ouput: 10

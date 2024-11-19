@@ -18,3 +18,5 @@ int main()
     fun(x);
     return 0;
 }
+
+// output: 3 2 1

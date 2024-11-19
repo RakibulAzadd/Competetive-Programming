@@ -15,3 +15,5 @@ int main()
     fun(x);
     return 0;
 }
+
+ // output: 1 2 3

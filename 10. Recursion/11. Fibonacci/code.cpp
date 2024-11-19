@@ -9,6 +9,7 @@ int fib(int n)
 
      cout<<n<< ' ';
     return fib(n - 2) + fib(n - 1);
+     //cout<<n-2 << " "<<n-1<< " ";
     
 }
 int main()

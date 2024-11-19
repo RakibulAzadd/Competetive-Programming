@@ -20,3 +20,5 @@ int main()
     printf("%d ", r);
     return 0;
 }
+ 
+ // output: 120 

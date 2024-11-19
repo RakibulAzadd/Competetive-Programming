@@ -22,3 +22,5 @@ int main()
     funA(20);
     return 0;
 }
+
+// output: 20 19 9 8 4 3 1

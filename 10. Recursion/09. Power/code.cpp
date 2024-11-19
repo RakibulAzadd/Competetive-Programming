@@ -12,13 +12,15 @@ int power1(int m, int n)
     if (n == 0)
         return 1;
     if (n % 2 == 0)
-        return power1(m * m, n /
-                                 2);
+        return power1(m * m, n /2);
+
     return m * power1(m * m, (n - 1) / 2);
 }
 int main()
 {
     int r = power1(2, 9);
+    cout<< power(2,10)<<endl;
     printf("%d ", r);
     return 0;
 }
+// output: 1024 and 512
