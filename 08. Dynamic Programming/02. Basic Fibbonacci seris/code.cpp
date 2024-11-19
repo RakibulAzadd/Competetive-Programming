@@ -23,3 +23,5 @@ int main(){
     cin>>n;
     cout<<fib(n)<<endl;
 }
+
+// output: 55 
