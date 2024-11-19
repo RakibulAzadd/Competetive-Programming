@@ -9,7 +9,7 @@ if(vis[i] == 0)
 if(dfs(it, node) == true)
 return true;
 }
-// already visited but is not parent node
+//already visited but is not parent node
 else if(it != parent)
 return true;
 }
