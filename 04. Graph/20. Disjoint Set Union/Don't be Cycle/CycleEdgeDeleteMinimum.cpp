@@ -3,9 +3,9 @@
 #define ll long long int
 #define endl '\n'
 using namespace std;
-const int N = 1e5 + 3;
+const int N = 2e5 + 3;
 int par[N];
-int sz[N];
+
 ll find(ll n)
 {
 	if (n == par[n])
@@ -19,9 +19,9 @@ int main()
 	for (ll i = 1; i <= n; i++)
 	{
 		par[i] = i;
-		sz[i] = 1;
+	 
 	}
-	while (m--)
+	for(ll i=0;i<m;i++)
 	{
 		cin >> x >> y;
 		x = find(x);
@@ -30,14 +30,23 @@ int main()
 			ans++;
 		else
 		{
-			if (sz[x] < sz[y])
-				swap(x, y);
+		 
 			par[y] = x;
-			sz[x] += sz[y];
+		
 		}
 	}
 	cout << ans << endl;
 }
 
 
-//https://atcoder.jp/contests/abc288/submissions/38662688
+/*  Input: 
+  
+  6 7
+1 2
+1 3
+2 3
+4 2
+6 5
+4 6
+4 5 
+output: 2*/
