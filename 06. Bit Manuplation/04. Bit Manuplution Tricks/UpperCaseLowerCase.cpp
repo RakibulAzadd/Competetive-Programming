@@ -19,6 +19,8 @@ int main()
   // lowercase to uppercase 
     char d= 'd';
     char D= (d&'_');
+    int a =d&'_';
+    cout<<a<<endl;
     cout << D << " = "<< D<<endl;
   
    

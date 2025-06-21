@@ -1,33 +1,70 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
+
+#define mod 1000000007
+#define int long long
+#define endl '\n'
+const int mn = 1e5 + 9;
 using namespace std;
+const int INF = 1e9 + 10;
+const int mm = 2e5 + 10;
 
-typedef long long ll;
+void solve()
+{
+  int n, x;
+  cin >> n >> x;
 
-ll maxHeight(ll x, ll y) {
-    ll low = 1, high = min(x, (ll)2e9); // Setting high to 2e9 since that's a safe upper bound
-    ll best = 0;
-
-    while (low <= high) {
-        ll mid = (low + high) / 2;
-        ll requiredC = (mid * (mid - 1)) / 2;
-        
-        if (mid <= x && requiredC <= y) {
-            best = mid; // mid can be a candidate for the answer
-            low = mid + 1; // Try for a larger height
-        } else {
-            high = mid - 1; // Try for a smaller height
-        }
+  if (n == 1)
+  {
+    cout << x << endl;
+    return;
+  }
+  vector<int> ans;
+  int value = 0;
+  int a = 0;
+  for (int i = 0; i < n - 1;)
+  {
+    if (value > x)
+      value = 0;
+    if ((x | value) == x)
+    {
+      a |= value;
+      ans.push_back(value);
+      i++;
     }
-
-    return best;
+    value++;
+  }
+  int b = ans[ans.size() - 1] + 1;
+  
+  if ((a | b) == x)
+  {  
+    ans.push_back(b);
+  }
+  else if(b>x){
+    ans.push_back(0);
+  }
+  else
+  {
+      ans.push_back(x);
+  }
+  for (int i = 0; i < ans.size(); i++)
+  {
+    cout << ans[i] << " ";
+  }
+  cout << endl;
 }
 
-int main() {
-    ll x, y;
-    cin >> x >> y;
+int32_t main()
+{
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
 
-    cout << maxHeight(x, y) << endl;
+  int t;
+  t = 1;
+  cin >> t;
+  while (t--)
+  {
 
-    return 0;
+    solve();
+  }
 }

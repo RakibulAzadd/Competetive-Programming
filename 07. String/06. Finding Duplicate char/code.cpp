@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
- int Hash[26];
+int Hash[26];
 int main(){
     char A[]="finding";
      

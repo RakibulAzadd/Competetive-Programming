@@ -8,7 +8,7 @@ void showdq(deque<int> g)
 {
 	deque<int>::iterator it;
 	for (it = g.begin(); it != g.end(); ++it)
-		cout << '\t' << *it;
+		cout << " " << *it;
 	cout << '\n';
 }
 

@@ -2,9 +2,9 @@
  using namespace std;
  int main()
   {
-    int a,x;
-    cin>>a;
-    int arr[a+4];
+    int a=7,x;
+     
+    int arr[a+4]={1 ,2 ,3 ,0 ,4, 5, 0};
     priority_queue<int>q;
     for(int i=1;i<=a;i++)
      {

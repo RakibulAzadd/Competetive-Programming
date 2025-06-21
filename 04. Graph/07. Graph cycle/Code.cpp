@@ -3,16 +3,17 @@ using namespace std;
 vector<int> v[100001];
 int vis[100001];
 int cnt = 0;
-  bool dfs(int node, int par)
+bool dfs(int node, int par)
 {
   vis[node] = 1;
-  bool isCycle=false;
+  bool isCycle = false;
   for (int child : v[node])
   {
-    if (vis[child] == 1 && child==par ) continue;
-    if(vis[child]==1) return true;
-      isCycle |=dfs(child,node);
-
+    if (vis[child] == 1 && child == par)
+      continue;
+    if (vis[child] == 1)
+      return true;
+    isCycle |= dfs(child, node);
   }
   return isCycle;
 }

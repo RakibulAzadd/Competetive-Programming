@@ -13,10 +13,15 @@ int main()
       cin>>x;
       mp[x]++;
     } 
-    for (auto it = mp.rbegin(); it != mp.rend(); it++)
-    {
-      cout<< (*it).first << " ^ "<< (*it).second<<endl;
+    for(auto &i: mp){
+      cout<<i.first<<" = "<<i.second<<endl;
     }
+    auto pos=mp.find(4);
+    cout<<(*pos).first<< " "<<(*pos).second<<endl;
+    // for (auto it = mp.rbegin(); it != mp.rend(); it++)
+    // {
+    //   cout<< (*it).first << " ^ "<< (*it).second<<endl;
+    // }
 
     return 0;
 }

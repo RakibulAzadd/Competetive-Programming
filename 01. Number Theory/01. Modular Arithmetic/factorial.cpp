@@ -3,7 +3,7 @@
  */
 #include<bits/stdc++.h>
 using namespace std;
-const int M = 100;
+const int M = 100000;
 int main(){
     int n;
     cin>>n;

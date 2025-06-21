@@ -8,8 +8,10 @@ int par[N];
 int sz[N];
 ll find(ll n)
 {
+	cout<<n<< " = "<<par[n]<<endl;
 	if (n == par[n])
 		return n;
+	//cout<<n<< " = "<<par[n]<<endl;
 	return par[n] = find(par[n]);
 }
 int main()
@@ -26,6 +28,7 @@ int main()
 		cin >> x >> y;
 		x = find(x);
 		y = find(y);
+	//	cout<<x<< " = " <<y<<endl;
 		if (x == y)
 			ans++;
 		else

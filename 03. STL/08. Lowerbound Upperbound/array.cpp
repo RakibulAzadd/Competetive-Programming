@@ -28,7 +28,10 @@ int main()
             cout<< "Not found "<<endl;
          }
       cout<< "upper_bound = "<< (*pt)<<endl;
-
+   
+      
+      int ans=*lower_bound(arr,arr+n,6);
+      cout<<ans<<endl;
       return 0;
 
   }

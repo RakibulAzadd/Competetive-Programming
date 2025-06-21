@@ -5,10 +5,6 @@
 int maxn=1;
 #define mx 40000001
 using namespace std;
- 
- 
- 
- 
     void solve()
     {
         int a,b,c,d,x=26,y=0,z,sum=0,ans=0,odd=0,even=0,res,zero=0,one=1;
