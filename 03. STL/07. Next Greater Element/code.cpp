@@ -34,7 +34,7 @@ int main()
      vector<int> nge=NGE(v);
 
      for(int i=0;i<n;i++)
-       {  cout<< v[i]<< " " << (nge[i]==-1 ? -1 : v[nge[i]]) <<endl;
+       {  cout<< v[nge[i]]<< " " ;
        }
      
   }
