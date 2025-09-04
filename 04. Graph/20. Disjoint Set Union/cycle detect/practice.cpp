@@ -8,7 +8,7 @@ int par[N];
 int sz[N];
 ll find(ll n)
 {
-	cout<<n<< " = "<<par[n]<<endl;
+	//cout<<n<< " = "<<par[n]<<endl;
 	if (n == par[n])
 		return n;
 	//cout<<n<< " = "<<par[n]<<endl;
@@ -33,10 +33,17 @@ int main()
 			ans++;
 		else
 		{
+			// union
+			   cout<<x<< " = x = y = " <<y<<endl;	
+			   cout<<sz[x]<< " = sz[x] = s[z] = " <<sz[y]<<endl;
+			   cout<<par[x]<< " = par[x] = par[y] = " <<par[y]<<endl;
+
 			if (sz[x] < sz[y])
 				swap(x, y);
 			par[y] = x;
 			sz[x] += sz[y];
+
+
 		}
 	}
 	cout << ans << endl;
